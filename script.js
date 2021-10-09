@@ -1,15 +1,47 @@
-// https://api.themoviedb.org/3/movie/550?api_key=97b02d3f0196ff4ae8de221437c48834
-// let apiKey = "97b02d3f0196ff4ae8de221437c48834";
-// let apiKey1 = "1cf50e6248dc270629e802686245c2c8";
-// let baseUrl = "https://api.themoviedb.org/3";
-// let popularMoviesUrl = "/discover/movie?sort_by=popularity.desc&";
-// let popularApiUrl = `${baseUrl}${popularMoviesUrl}api_key=${apiKey}`;
-// let imageUrl = "https://image.tmdb.org/t/p/w500";
-// let main = document.getElementById("main");
+let api_url =
+  'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=97b02d3f0196ff4ae8de221437c48834&page=1';
 
-const API_KEY = "api_key=97b02d3f0196ff4ae8de221437c48834";
-const BASE_URL = "https://api.themoviedb.org/3";
-const API_URL = BASE_URL + "/discover/movie?sort_by=popularity.desc&" + API_KEY;
-const IMG_URL = "https://image.tmdb.org/t/p/w500";
-const SEARCH_URL = BASE_URL+"/search/movie?"+API_KEY;
-const main = document.getElementById("main");
+  let img_path = 'https://image.tmdb.org/t/p/w1280';
+
+  let search_api = 'https://api.themoviedb.org/3/search/movie?api_key=97b02d3f0196ff4ae8de221437c48834&query="'
+
+let form = document.getElementById('form')
+let search = document.getElementById('search')
+let main = document.getElementById('main')
+
+
+
+getMovies(api_url)
+
+function getMovies(url){
+    fetch(url)
+    .then(function(response){
+        return response.json()
+    })
+    .then(function(data){
+        console.log(data.results)
+        showMovies(data.results)
+    })
+}
+
+function showMovies(results){
+    main.innerHTML = ''
+    for (let i = 0; i < results.length; i++){
+        let movieEl = document.createElement('div');
+        movieEl.classList.add('movie');
+        movieEl.innerHTML = `<img src="${img_path}${results[i].poster_path}" alt="${results[i].title}" <div class="movie-info"><h3>${results[i].title}</h3><span class="${getColor(results[i].vote_average)}">${results[i].vote_average}</span></div><div class="overview"><h3>Overview</h3>${results[i].overview}</div>`;
+        main.appendChild(movieEl)
+
+    }
+}
+
+function getColor(vote) {
+    if(vote >= 8){
+        return "green"
+    }else if(vote >= 5){
+        return "orange"
+    }else{
+        return "red"
+    }
+}
+
