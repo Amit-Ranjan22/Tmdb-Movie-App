@@ -45,3 +45,14 @@ function getColor(vote) {
     }
 }
 
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    let searchTerm = search.value
+
+    if(searchTerm && searchTerm !== ''){
+        getMovies(search_api + searchTerm)
+        search.value = ''
+    }else {
+        window.location.reload()
+    }
+})
