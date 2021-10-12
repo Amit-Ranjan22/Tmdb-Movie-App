@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TMDB-Movie-App</title>
+    <title>Movie-App</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <form id="form">
             <input type="text" placeholder="Search" class="search" id="search">
         </form>
     </header>
-
     <div id="tags">
         <!-- <div class="tag">Action</div>
         <div class="tag">Adventure</div>
         <div class="tag">Drama</div>
         <div class="tag">Comedy</div> -->
+    </div>
+
+    <!-- Full screen Overlay Navigation from https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp-->
+    <div id="myNav" class="overlay">
+
+        <!-- Button to close the overlay navigation -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+        <!-- Overlay content -->
+        <div class="overlay-content" id="overlay-content">
+            <!-- <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a> -->
+        </div>
+
     </div>
     <main id="main">
         <!-- <div class="movie">
@@ -58,6 +75,13 @@
             </div>
         </div> -->
     </main>
+
+    <div class="pagination">
+        <div class="page disabled" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
     <script src="script.js"></script>
 </body>
+
 </html>
