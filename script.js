@@ -1,6 +1,7 @@
 // let api_url =
 //   'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=97b02d3f0196ff4ae8de221437c48834&page=1';
 
+let api_key = "api_key=97b02d3f0196ff4ae8de221437c48834"
 let base_url = "https://api.themoviedb.org/3"
 let api_url =
   'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=97b02d3f0196ff4ae8de221437c48834';
@@ -11,6 +12,7 @@ let img_path = 'https://image.tmdb.org/t/p/w1280';
 
 let search_api = 'https://api.themoviedb.org/3/search/movie?api_key=97b02d3f0196ff4ae8de221437c48834&query="'
 
+let api_genreUrl = `${base_url}/genre/movie/list?${api_key}`;
 
 let genres = [
   {

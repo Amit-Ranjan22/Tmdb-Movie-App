@@ -8,7 +8,7 @@ Because of the time constraint, for now we have only managed to include the disp
 
 **User Story**<br>
 As a person who always turn towards movies or tv-shows as a source of entertainment,<br>
-I want  : to have a single platform which provides the movies and tv-shows list<br>
+I WANT  : to have a single platform which provides the movies and tv-shows list<br>
 So THAT : I am able to decide which movie or show to watch based on its overview, rating and 
           available trailer. I should be able to search the movie with kea-word and genre.
 
@@ -38,15 +38,15 @@ WHEN: style attributes are added to the form element using css.
 ------
 It's considered done<br>
 ------
-WHEN: multiple divs with "class=movie" are created in html with image tag inside the div which carry image source of the movie 
-      poater<br>
+WHEN: multiple divs with "class=movie" are created in html with image tag inside the div which carry 
+      image source of the movie poater<br>
 WHEN: divs are created inside "class=movie" div which has h3 tag to display movie title, and a span to 
       display movie rating.<br> 
 WHEN: another div is created inside "class=movie" div to display the overview of each movie.<br>
 WHEN: below given url is imported inside css file to use google font<br>
       @import url(https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap)<br>
 WHEN: all the style atrributes for search box, movie title, movie rating and overview are added to
-      css.<br>.
+      css.<br>
 WHEN: an url is created to fetch the movie data from a website using an API and key.<br>
 WHEN: a function called "getMovies" is written to get the response from the api in the form of array.<br>
 WHEN: fetch(url) method is used  with .then inside the getMovies function.<br>
@@ -58,6 +58,46 @@ WHEN: a div is created dynamically using DOM manipulation inside the for-loop so
 WHEN: a classlist is added for each div.<br>
 WHEN: an movie image, its rating, its overview, title are added as an innerhtml to the dynamically 
       created divs by using data from the api fetch results.<br>
-WHEN: 
+WHEN: "main" element is grabbed through a variable and the dynamically created divs are appended as 
+       child to the main div inside the for-loop.<br>
+WHEN: a function called getColor(vote) is written which will set different color to the span as per the 
+      rating.<br>
+
+**(4)* When I click on the search bar, I am able to search for any movie with a kea-word**
+------
+It's considered done<br>
+------
+WHEN: an eventListener is add on the submit button.<br>
+WHEN: an url is used to search the movie by using api inside eventListener.<br>
+WHEN: "search.value" is added tot he url.<br>
+WHEN: this url is passed as a parameter in the "getMovies" function inside eventListener.<br>
+
+**(4)* The page prvides me option to search movies based on genre**
+------
+It's considered done<br>
+------
+WHEN: an url is created based on genre criteria, base url and api key.<br>
+WHEN: this url is used to fetch the data from the browser which is in the form of array.<br>
+WHEN: the results of array is stored in a variable.<br>
+WHEN: in html, a div with an id of tags is created.<br>
+WHEN: multiple divs are created inside the above created div to display various genre name.<br>
+WHEN: all the divs are given style attributes in css file.<br>
+WHEN: a function called setGenre() is written.<br>
+WHEN: div with id tags is grabbed and stored in a variable.<br>
+WHEN: this tags div innerHtml is set to empty string so that it disapper fron the page and we can create 
+      div dynamically.<br>
+WHEN: for loop is used for every id in the array to dynamically generate divs based on id in the array.
+      <br>
+WHEN: a classList is added to each divs created dynamically.<br>
+WHEN: an eventListener is added on these dynamically created divs inside the for-loop.<br>
+WHEN: above created url is passed as a parameter inside the "getMovies" function inside the for-loop.<br>
+WHEN: a function called "highlightSelectedGenre" is written which will highlight the selected genre from 
+      the list.<br>
+WHEN: for-loop is used inside the "highlightSelectedGenre" function for each element in the array.<br>
+WHEN: a classList of 'highlight' is added to every selected genre.<br>
+WHEN: in the style sheet we define the style attribute to the class 'highlight'.<br>
+WHEN: a function called clearButton() is written to clear the selected genre.<br>
+WHEN: an eventListener is added to the clear button inside the clearButton() function.<br>
+WHEN: a background color is given to clear button in style sheet.<br> 
 
 
