@@ -26,7 +26,7 @@ WHEN: two different divs are created inside the main element having individual i
 WHEN: I click on either link, I am directed to its connecting page to display either movies or tv-shows 
       list.
 
-**(2)* When I am on movie list page or tv-shows page, I am presented with an option to search for any movie with a kea-word**
+**(2)* When I am on movie list page or tv-shows page, I am presented with an option to search for any movie with a key-word**
 ------
 It's considered done<br>
 ------
@@ -63,7 +63,7 @@ WHEN: "main" element is grabbed through a variable and the dynamically created d
 WHEN: a function called getColor(vote) is written which will set different color to the span as per the 
       rating.<br>
 
-**(4)* When I click on the search bar, I am able to search for any movie with a kea-word**
+**(4)* When I click on the search bar, I am able to search for any movie with a key-word**
 ------
 It's considered done<br>
 ------
@@ -100,4 +100,26 @@ WHEN: a function called clearButton() is written to clear the selected genre.<br
 WHEN: an eventListener is added to the clear button inside the clearButton() function.<br>
 WHEN: a background color is given to clear button in style sheet.<br> 
 
+**(5)* The page provides me option to look for more movie list by using "next-page" or "previous-page" button**
+------
+It's considered done<br>
+------
+WHEN: we create an url based on the api and next page search criteria.<br>
+WHEN: we create a div with class=pagination just below the main div.<br>
+WHEN: we create three more divs inside the div with class=pagination for previous-page, current-page & 
+      next-page.<br>
+WHEN: we add some style attributes to the pagination div in our style.css.<br>
+WHEN: we grab all the elements by their IDs in our script file/<br>
+WHEN: variables for current-page, previous-page, next-page, total-pages, and last used url are declared 
+      and given a value.<br>
+WHEN: when all these variables are used inside the if-statement in the "getMovies" function.<br>
+WHEN: current page variable is set as "data.page" as per api response.<br>
+WHEN: total page is set as "data.total_pages" as per api response.<br>
+WHEN: next page i set as "current-page + 1" and previous-page is set as "current-page - 1".<br>
+WHEN: an eventListener is added to both next and previous button to act accordingly.<br>
+WHEN: a function called "nextPageCall(page)" is written.<br>
+WHEN: inside this function,last used url is split by '?', '&', and '=' using ".split".<br>
+WHEN: if-statement is used based on page number and split url, and then split url is joined together by 
+      using ".join".<br>
+WHEN: "getMovies" function is called inside the "nextPageCall(page)" function.<br>
 
