@@ -2,10 +2,9 @@
 
 **Application Description**
 
-Having so many movies and tv-shows made in the past and being made and released evry single day, as a movie enthusiast, having so many streaming services available, one is bound to get confused that which movie or tv-show is streaming on which platform, what are the cast and overview of the movie, its rating etc.<br>
-We wanted to create an online database containing information and statistics about movies, TV shows as well as actors, directors and other film industry professionals. This information can include lists of cast and crew members, movie release dates and box office information, plot summaries, trailers, actor and director biographies and other trivia.<br>
-Because of the time constriant, as of now we have only added the feature of displaying movies and tv-shows list with their posters,name,rating and a short overview about them along with the available trailers.<br>
-In the future we have planned to add some more features to the database like information about the streaming paltform of each movie, providing link to its straming platform, proving information about its cast, providing details and link to their past work, providing the information about the current shows running in your local theatre etc.
+The database of movies and tv shows is so overwhelmingly enormous with new ones being added in every passing day. Even an enthusiastic movie buff would find himself or herself lost trying to keep track which movie or tv show is streaming on which platform and to seek information about movie cast, movie overview or plot, its rating, etc.<br> 
+Hence we felt motivated to create an online database which would include information and statistics about both movies and tv shows as well as about actors, directors and other film industry professionals. This information can include lists of cast and crew members, movie release dates, box office performance, movie plot, trailers, biographies of actors and directors and other trivia related to the movie.<br> 
+Because of the time constraint, for now we have only managed to include the display feature of movies and tv shows posters, their titles, their ratings and a short overview about them along with the available trailers. In near future, we plan to add some more features to the database like information about streaming platform of each movie and its link, providing information about its cast and their filmography and relevant links, mentioning the current movie shows running in local theatre etc.
 
 **User Story**<br>
 As a person who always turn towards movies or tv-shows as a source of entertainment,<br>
@@ -44,8 +43,21 @@ WHEN: multiple divs with "class=movie" are created in html with image tag inside
 WHEN: divs are created inside "class=movie" div which has h3 tag to display movie title, and a span to 
       display movie rating.<br> 
 WHEN: another div is created inside "class=movie" div to display the overview of each movie.<br>
-WHEN: below given url is imported inside css file to use google font
-      @import url(https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap)
+WHEN: below given url is imported inside css file to use google font<br>
+      @import url(https://fonts.googleapis.com/css?family=Poppins:wght@200;400;700&display=swap)<br>
+WHEN: all the style atrributes for search box, movie title, movie rating and overview are added to
+      css.<br>.
+WHEN: an url is created to fetch the movie data from a website using an API and key.<br>
+WHEN: a function called "getMovies" is written to get the response from the api in the form of array.<br>
+WHEN: fetch(url) method is used  with .then inside the getMovies function.<br>
+WHEN: a function called "showMovies(results)" is written.<br>
+WHEN: for-loop is used inside the showMovies(results) to loop through the results ontained through 
+      getMovies function so that we can display movie details for each one of them.<br>
+WHEN: a div is created dynamically using DOM manipulation inside the for-loop so that it is created for 
+      each result.<br>
+WHEN: a classlist is added for each div.<br>
+WHEN: an movie image, its rating, its overview, title are added as an innerhtml to the dynamically 
+      created divs by using data from the api fetch results.<br>
 WHEN: 
 
 
