@@ -139,3 +139,18 @@ WHEN: full screen Overlay navigation from "https://www.w3schools.com/howto/howto
 WHEN: a function called "openNav()" is written.<br>
 WHEN: fetch method is used with url containing the movie id and videos as query parameter.<br>
 WHEN: "site" & "key" from the results array are used with the youtube "iframe".
+
+------
+Deployed application screenshot<br>
+------
+<img src = "Deployed-App-Screenshot/TMDB-MovieApp-Screenshot.png" alt= "weather-dashboard-app-screenshot">
+
+*GitHub URL to the repository*
+------
+https://github.com/Amit-Ranjan22/Tmdb-Movie-App.git
+------
+
+*URL to the deployed application*
+------
+https://amit-ranjan22.github.io/Tmdb-Movie-App/
+------
