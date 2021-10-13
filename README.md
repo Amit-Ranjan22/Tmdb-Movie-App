@@ -1,4 +1,4 @@
-# Tmdb-Movie-App
+# OneStop-Entertainment-App
 
 **Application Description**
 
@@ -72,7 +72,7 @@ WHEN: an url is used to search the movie by using api inside eventListener.<br>
 WHEN: "search.value" is added tot he url.<br>
 WHEN: this url is passed as a parameter in the "getMovies" function inside eventListener.<br>
 
-**(4)* The page prvides me option to search movies based on genre**
+**(5)* The page prvides me option to search movies based on genre**
 ------
 It's considered done<br>
 ------
@@ -100,7 +100,7 @@ WHEN: a function called clearButton() is written to clear the selected genre.<br
 WHEN: an eventListener is added to the clear button inside the clearButton() function.<br>
 WHEN: a background color is given to clear button in style sheet.<br> 
 
-**(5)* The page provides me option to look for more movie list by using "next-page" or "previous-page" button**
+**(6)* The page provides me option to look for more movie list by using "next-page" or "previous-page" button**
 ------
 It's considered done<br>
 ------
@@ -123,3 +123,19 @@ WHEN: if-statement is used based on page number and split url, and then split ur
       using ".join".<br>
 WHEN: "getMovies" function is called inside the "nextPageCall(page)" function.<br>
 
+**(7)*The page provides a button to view the available trailer for each movie on the page.**
+------
+It's considered done<br>
+------
+WHEN: a button element called "Know-More" is added with "class=know-more" just below the "Overview" in 
+      the "showMovies()" function where we have dynamically created all the elements.<br>
+WHEN: style attribute is added to the "know-more" button in sryle.css.<br>
+WHEN: the key "id" (from the array response through API url) is added to the know-more button.<br> 
+WHEN: the element with this id grabbed using getElementById().<br>
+WHEN: an eventListener is added to this element.<br>
+WHEN: (results.id) is logged into console.<br>
+WHEN: full screen Overlay navigation from "https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp" to add divs 
+      and their css style attribute are used and put in the html page just above the main tag.<br>
+WHEN: a function called "openNav()" is written.<br>
+WHEN: fetch method is used with url containing the movie id and videos as query parameter.<br>
+WHEN: "site" & "key" from the results array are used with the youtube "iframe".
